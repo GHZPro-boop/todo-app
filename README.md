@@ -1,4 +1,4 @@
-**Todo Application**
+#To-Do Application
 
 ## Overview
 This is a simple To-Do application built using React.js. It allows users to create, manage, and track their tasks. Users can add new tasks, mark tasks as completed, filter tasks based on their status (all, active, completed), and clear completed tasks.
