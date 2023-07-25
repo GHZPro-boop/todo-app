@@ -1,11 +1,11 @@
 import React from "react";
 import { MdDeleteForever, MdCheckCircleOutline, MdCancel } from "react-icons/md"
 
-export const Item = ({ itemData, deleteItem, statusUpdate }) => {
+export const Item = ({ itemData, deleteItem, statusUpdate, isDarkMode }) => {
 
     return (
         <div>
-            <div className="text-[#303249] px-5 h-14 flex mx-5 justify-between items-center border-[#6b6d7c] border-b-[1px]">
+            <div className={`${isDarkMode ? "text-[#303249]" : "text-gray-400"} px-5 h-14 flex mx-5 justify-between items-center border-[#6b6d7c] border-b-[1px]`}>
                 <div className="flex items-center">
                     {
                         itemData.status ? (

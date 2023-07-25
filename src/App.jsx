@@ -73,7 +73,7 @@ function App() {
       filteredTodos = todos.filter(todo => todo.status)
     }
 
-    return filteredTodos.map(todo => <Item key={todo.id} statusUpdate={toggleTodoStatus} deleteItem={removeTodoById} itemData={todo} />)
+    return filteredTodos.map(todo => <Item key={todo.id} isDarkMode={isDarkMode} statusUpdate={toggleTodoStatus} deleteItem={removeTodoById} itemData={todo} />)
   }
 
   //function to change theme mode
@@ -85,7 +85,7 @@ function App() {
     <div className={`${isDarkMode ? 'bg-white' : 'bg-gray-900'} min-h-screen pb-20`}>
       <div className='bg-mobile_image bg-no-repeat bg-cover h-52 px-5 py-5'>
         <div className='flex justify-between items-center lg:w-[50%] lg:mx-auto'>
-          <p className='text-3xl font-semibold tracking-[6px]'>TODO</p>
+          <p className={`${isDarkMode ? 'text-white' : 'text-[#2b2d44]'} text-3xl font-semibold tracking-[6px]`}>TODO</p>
           {
             isDarkMode ? (
               <BsSun onClick={toggleMode} className='h-6 w-6' />
@@ -95,17 +95,17 @@ function App() {
           }
         </div>
         <div className='mt-8 lg:w-[50%] lg:mx-auto'>
-          <Forms handleAddEvent={addTodo} />
+          <Forms handleAddEvent={addTodo} isDarkMode={isDarkMode} />
         </div>
       </div>
 
       {/* display items section  */}
       <div className={`h-60 mx-5 rounded-md relative -top-8 lg:w-[48%] lg:mx-auto ${isDarkMode ? 'bg-white' : 'bg-gray-900'}`}>
-        <FilterSection filterType={setFilterValue} />
+        <FilterSection filterType={setFilterValue} isDarkMode={isDarkMode} />
         {renderTodos()}
         <div className='flex justify-between items-center mx-5 h-14'>
-          <p className='text-[#494c6b]'>{getTodosCount()} item(s)</p>
-          <button type="button" onClick={() => clearCompletedTodos()} className="focus:font-bold text-[#494c6b]">Clear Completed</button>
+          <p className={`${isDarkMode ? "text-[#494c6b]" : "text-gray-300"}`}>{getTodosCount()} item(s)</p>
+          <button type="button" onClick={() => clearCompletedTodos()} className={`focus:font-bold ${isDarkMode ? "text-[#494c6b]" : "text-gray-300"}`}>Clear Completed</button>
         </div>
       </div>
     </div>

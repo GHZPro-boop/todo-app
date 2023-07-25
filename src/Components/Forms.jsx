@@ -9,7 +9,7 @@ export const Forms = ({ handleAddEvent, isDarkMode }) => {
         setUserInput("");
     }
 
-    const formClassName = isDarkMode ? "bg-gray-800" : "bg-white";
+    const formClassName = isDarkMode ? "bg-white" : "bg-gray-800";
     const inputClassName = isDarkMode ? "text-white text-sm px-3 py-1 w-full block bg-gray-800" :
         "text-gray-900 text-sm px-3 py-1 w-full block";
 
@@ -17,7 +17,7 @@ export const Forms = ({ handleAddEvent, isDarkMode }) => {
         <div className={`${formClassName} rounded-md px-5 py-2`}>
             <form onSubmit={handleSubmit} className="flex items-center">
                 <div className="w-full">
-                    <input type="text" onChange={(e) => setUserInput(e.target.value)} value={userInput} placeholder="Create new ToDo item" className={`${inputClassName}`} />
+                    <input type="text" onChange={(e) => setUserInput(e.target.value)} value={userInput} placeholder="Create new ToDo item" className={`${inputClassName} ${isDarkMode ? "bg-white" : "bg-gray-800 text-gray-300"}`} />
                 </div>
                 <button type="submit" className={`text-white ${isDarkMode ? "bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
                     : "bg-gradient-to-r from-blue-500 to-green-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-blue-200"} font-medium rounded-lg text-sm px-5 py-1.5 text-center`}>ADD</button>
