@@ -3,6 +3,12 @@
 ## Overview
 This is a simple To-Do application built using React.js. It allows users to create, manage, and track their tasks. Users can add new tasks, mark tasks as completed, filter tasks based on their status (all, active, completed), and clear completed tasks.
 
+## Images
+![DesktopLightMD](https://github.com/GHZPro-boop/todo-app/assets/125023481/e5ef9aa4-628b-4b28-b73a-d3fc56906303)
+![Desktop DarkMD](https://github.com/GHZPro-boop/todo-app/assets/125023481/2e769596-b722-4320-aa52-baebf1245eb8)
+![Mobile LightMD](https://github.com/GHZPro-boop/todo-app/assets/125023481/fe66566f-d3fb-4369-b02b-61fa0a785549)
+![Mobile DarkMD](https://github.com/GHZPro-boop/todo-app/assets/125023481/2940400c-cea6-4995-812c-7a85b322f696)
+
 ## Features
 - Add new tasks: Users can add new tasks by entering the task text and clicking the "ADD" button.
 - Mark tasks as completed: Users can mark tasks as completed by clicking on the checkbox next to each task.
